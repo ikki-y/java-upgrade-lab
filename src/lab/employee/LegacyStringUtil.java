@@ -1,41 +1,24 @@
 package lab.employee;
 
-import java.lang.reflect.Field;
-
 /**
- * 【罠4】リフレクションで String の内部フィールド "value" を直接読む。
- * 「toCharArray() はコピーが発生して遅いので、中身の配列をそのまま使う」
- * という昔の"高速化テクニック"。JDK の中身に依存している。
+ * 文字列の表示幅を数える。
+ *
+ * 【実験Eで修正】リフレクションで String の内部フィールド "value" を読むのをやめた。
+ *   - Java 16 以降、JDK の内部(private)へのアクセスは既定で禁止
+ *   - そもそも Java 9 で String の中身が char[] から byte[] に変わっていて、
+ *     仮にアクセスできても (char[]) への型変換で落ちる
+ * 昔の「コピーを避ける高速化」は、今の JVM では効果がほぼないので、普通に charAt() で読む。
  */
 public final class LegacyStringUtil {
 
-    private static final Field VALUE;
-
-    static {
-        try {
-            VALUE = String.class.getDeclaredField("value");
-            VALUE.setAccessible(true); // private フィールドを無理やり読めるようにする
-        } catch (NoSuchFieldException e) {
-            throw new ExceptionInInitializerError(e);
-        }
-    }
-
     private LegacyStringUtil() {
-    }
-
-    /** String の中身の char 配列を、コピーせずに取り出す */
-    static char[] rawChars(String s) {
-        try {
-            return (char[]) VALUE.get(s);
-        } catch (IllegalAccessException e) {
-            throw new IllegalStateException(e);
-        }
     }
 
     /** 表示幅を数える(半角=1、全角=2)。一覧表の桁そろえに使う */
     public static int displayWidth(String s) {
         int width = 0;
-        for (char c : rawChars(s)) {
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
             boolean halfWidth = c <= 0x7F || (c >= 0xFF61 && c <= 0xFF9F);
             width += halfWidth ? 1 : 2;
         }
