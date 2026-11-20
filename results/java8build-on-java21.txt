@@ -1,0 +1,78 @@
+=== 実行環境 ===
+java.version    : 21.0.7
+java.vendor     : Oracle Corporation
+file.encoding   : UTF-8
+default charset : UTF-8
+locale          : ja_JP
+timezone        : Asia/Tokyo
+実行日時        : 2026-11-20 13:50:47
+
+=== list(社員一覧) ===
+[NG] list(社員一覧) : java.lang.ExceptionInInitializerError
+java.lang.ExceptionInInitializerError
+	at lab.employee.EmployeeReport.pad(EmployeeReport.java:24)
+	at lab.employee.EmployeeReport.printList(EmployeeReport.java:11)
+	at lab.employee.Main.lambda$main$0(Main.java:45)
+	at lab.employee.Main.runStep(Main.java:119)
+	at lab.employee.Main.main(Main.java:45)
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final byte[] java.lang.String.value accessible: module java.base does not "opens java.lang" to unnamed module @7530d0a
+	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:391)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:367)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:315)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+	at lab.employee.LegacyStringUtil.<clinit>(LegacyStringUtil.java:17)
+	... 5 more
+
+=== dates(日付の書式) ===
+FULL   (ja)        : 2019年5月1日水曜日
+LONG   (ja)        : 2019年5月1日
+MEDIUM (ja)        : 2019/05/01
+SHORT  (ja)        : 2019/05/01
+FULL   (ja 和暦)   : 令和元年5月1日
+日時 MEDIUM (ja)   : 2019/05/01 9:30:00
+FULL   (en_US)     : Wednesday, May 1, 2019
+時刻 SHORT (en_US) : 9:30\u202FAM
+書式指定 (ja)      : 2019/05/01(水) 午前 9:30
+書式指定 (en_US)   : Wed, May 1, 2019 9:30 AM
+[OK] dates(日付の書式)
+
+=== xml(XML保存と読み込み) ===
+[NG] xml(XML保存と読み込み) : java.lang.NoClassDefFoundError: javax/xml/bind/JAXBContext
+java.lang.NoClassDefFoundError: javax/xml/bind/JAXBContext
+	at lab.employee.EmployeeXmlStore.save(EmployeeXmlStore.java:24)
+	at lab.employee.Main.lambda$main$2(Main.java:57)
+	at lab.employee.Main.runStep(Main.java:119)
+	at lab.employee.Main.main(Main.java:55)
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBContext
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 4 more
+
+=== bonus(賞与計算) ===
+[NG] bonus(賞与計算) : java.lang.NullPointerException: Cannot invoke "javax.script.ScriptEngine.put(String, Object)" because "<local2>" is null
+java.lang.NullPointerException: Cannot invoke "javax.script.ScriptEngine.put(String, Object)" because "<local2>" is null
+	at lab.employee.BonusCalculator.calculate(BonusCalculator.java:27)
+	at lab.employee.Main.lambda$main$3(Main.java:70)
+	at lab.employee.Main.runStep(Main.java:119)
+	at lab.employee.Main.main(Main.java:66)
+
+=== token(社員証トークン) ===
+[NG] token(社員証トークン) : java.lang.NoClassDefFoundError: sun/misc/BASE64Encoder
+java.lang.NoClassDefFoundError: sun/misc/BASE64Encoder
+	at lab.employee.TokenUtil.createToken(TokenUtil.java:22)
+	at lab.employee.Main.lambda$main$4(Main.java:79)
+	at lab.employee.Main.runStep(Main.java:119)
+	at lab.employee.Main.main(Main.java:77)
+Caused by: java.lang.ClassNotFoundException: sun.misc.BASE64Encoder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 4 more
+
+=== csv(CSV出力) ===
+出力先: work\employees.csv(314 バイト)
+[OK] csv(CSV出力)
+
+=== 結果: 6 件中 NG 4 件 ===
