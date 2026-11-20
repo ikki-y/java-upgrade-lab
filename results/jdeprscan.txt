@@ -1,0 +1,7 @@
+ディレクトリ out:
+class lab/employee/DateFormatDemoが非推奨メソッドjava/util/Locale::<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Vを使用しています 
+エラー: クラスjavax/xml/bind/JAXBContextが見つかりません
+エラー: クラスjavax/xml/bind/Marshallerが見つかりません
+エラー: クラスjavax/xml/bind/Unmarshallerが見つかりません
+エラー: クラスsun/misc/BASE64Encoderが見つかりません
+エラー: クラスsun/misc/BASE64Decoderが見つかりません

@@ -1,0 +1,14 @@
+out -> JDK removed internal API
+   lab.employee.TokenUtil                             -> sun.misc.BASE64Decoder                             JDK removed internal API
+   lab.employee.TokenUtil                             -> sun.misc.BASE64Encoder                             JDK removed internal API
+
+警告: JDK内部APIはサポートされておらず、JDK実装専用ですが、互換性なしで
+削除または変更される場合があり、アプリケーションを中断させる可能性があります。
+JDK内部APIの依存性を削除するようコードを変更してください。
+JDK内部APIの置換に関する最新の更新については、次を確認してください:
+https://wiki.openjdk.org/display/JDK8/Java+Dependency+Analysis+Tool
+
+JDK内部API                                 修正候補
+--------                                 ----
+sun.misc.BASE64Decoder                   Use java.util.Base64 @since 1.8
+sun.misc.BASE64Encoder                   Use java.util.Base64 @since 1.8

@@ -1,0 +1,16 @@
+out -> JDK removed internal API
+out -> java.base
+out -> java.scripting
+out -> Œ©‚Â‚©‚è‚Ü‚¹‚ñ
+   lab.employee                                       -> java.io                                            java.base
+   lab.employee                                       -> java.lang                                          java.base
+   lab.employee                                       -> java.lang.invoke                                   java.base
+   lab.employee                                       -> java.lang.reflect                                  java.base
+   lab.employee                                       -> java.nio.charset                                   java.base
+   lab.employee                                       -> java.nio.file                                      java.base
+   lab.employee                                       -> java.text                                          java.base
+   lab.employee                                       -> java.util                                          java.base
+   lab.employee                                       -> javax.script                                       java.scripting
+   lab.employee                                       -> javax.xml.bind                                     Œ©‚Â‚©‚è‚Ü‚¹‚ñ
+   lab.employee                                       -> javax.xml.bind.annotation                          Œ©‚Â‚©‚è‚Ü‚¹‚ñ
+   lab.employee                                       -> sun.misc                                           JDK removed internal API
