@@ -1,0 +1,63 @@
+=== 実行環境 ===
+java.version    : 21.0.7
+java.vendor     : Oracle Corporation
+file.encoding   : UTF-8
+default charset : UTF-8
+locale          : ja_JP
+timezone        : Asia/Tokyo
+実行日時        : 2026-11-20 16:59:58
+
+=== list(社員一覧) ===
+ID    氏名        部署                    入社日      月給
+1001  山田 太郎   営業部                  2015/04/01  320,000
+1002  佐藤 花子   システム開発部          2012/04/01  380,000
+1003  鈴木 一郎   インフラ基盤サービス部  2019/05/01  290,000
+1004  高橋 美咲   総務部                  2021/10/01  260,000
+1005  Tanaka Ken  海外事業部              2018/07/15  350,000
+[OK] list(社員一覧)
+
+=== dates(日付の書式) ===
+FULL   (ja)        : 2019年5月1日
+LONG   (ja)        : 2019/05/01
+MEDIUM (ja)        : 2019/05/01
+SHORT  (ja)        : 19/05/01
+FULL   (ja 和暦)   : 令和元年5月1日
+日時 MEDIUM (ja)   : 2019/05/01 9:30:00
+FULL   (en_US)     : Wednesday, May 1, 2019
+時刻 SHORT (en_US) : 9:30 AM
+書式指定 (ja)      : 2019/05/01(水) 午前 9:30
+書式指定 (en_US)   : Wed, May 1, 2019 9:30 AM
+[OK] dates(日付の書式)
+
+=== xml(XML保存と読み込み) ===
+保存先: work\employees.xml(1385 バイト)
+読み込んだ件数: 5 件 / 先頭: 山田 太郎
+[OK] xml(XML保存と読み込み)
+
+=== bonus(賞与計算) ===
+山田 太郎 評価4 → 賞与 800,000 円
+佐藤 花子 評価5 → 賞与 1,140,000 円
+鈴木 一郎 評価3 → 賞与 580,000 円
+高橋 美咲 評価2 → 賞与 390,000 円
+Tanaka Ken 評価4 → 賞与 875,000 円
+[OK] bonus(賞与計算)
+
+=== token(社員証トークン) ===
+1001: MTAwMTrlsbHnlLAg5aSq6YOOOuWWtualremDqDoyMDE1MDQwMQ==
+      長さ=52 改行を含む=no 復元=1001:山田 太郎:営業部:20150401
+1002: MTAwMjrkvZDol6Qg6Iqx5a2QOuOCt+OCueODhuODoOmWi+eZuumDqDoyMDEyMDQwMQ==
+      長さ=68 改行を含む=no 復元=1002:佐藤 花子:システム開発部:20120401
+1003: MTAwMzrpiLTmnKgg5LiA6YOOOuOCpOODs+ODleODqeWfuuebpOOCteODvOODk+OCuemDqDoyMDE5
+MDUwMQ==
+      長さ=86 改行を含む=yes 復元=1003:鈴木 一郎:インフラ基盤サービス部:20190501
+1004: MTAwNDrpq5jmqYsg576O5ZKyOue3j+WLmemDqDoyMDIxMTAwMQ==
+      長さ=52 改行を含む=no 復元=1004:高橋 美咲:総務部:20211001
+1005: MTAwNTpUYW5ha2EgS2VuOua1t+WkluS6i+alremDqDoyMDE4MDcxNQ==
+      長さ=56 改行を含む=no 復元=1005:Tanaka Ken:海外事業部:20180715
+[OK] token(社員証トークン)
+
+=== csv(CSV出力) ===
+出力先: work\employees.csv(260 バイト)
+[OK] csv(CSV出力)
+
+=== 結果: 6 件中 NG 0 件 ===

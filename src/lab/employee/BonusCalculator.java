@@ -13,6 +13,10 @@ import javax.script.ScriptException;
  * 【罠3】Nashorn(JDK 内蔵の JavaScript エンジン)で賞与を計算する。
  * 計算式を外部の .js ファイルに出しておけば、Java を再コンパイルせずに
  * 人事部門の都合で式を変えられる…という昔よくあった作り。
+ *
+ * 【実験Eで修正】Nashorn は Java 15 で JDK から削除された。
+ *   pom.xml に単体版の部品(org.openjdk.nashorn:nashorn-core)を追加した。
+ *   このクラスのコードは変更なし(部品があれば getEngineByName("nashorn") で見つかる)。
  */
 public class BonusCalculator {
 
