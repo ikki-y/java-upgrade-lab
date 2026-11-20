@@ -1,0 +1,139 @@
+java version "21.0.7" 2025-04-15 LTS
+Java(TM) SE Runtime Environment (build 21.0.7+8-LTS-245)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.7+8-LTS-245, mixed mode, sharing)
+C:\dev\java-upgrade-lab\src\lab\employee\Employee.java:5: エラー: パッケージjavax.xml.bind.annotationは存在しません
+import javax.xml.bind.annotation.XmlAccessType;
+                                ^
+C:\dev\java-upgrade-lab\src\lab\employee\Employee.java:6: エラー: パッケージjavax.xml.bind.annotationは存在しません
+import javax.xml.bind.annotation.XmlAccessorType;
+                                ^
+C:\dev\java-upgrade-lab\src\lab\employee\Employee.java:7: エラー: パッケージjavax.xml.bind.annotationは存在しません
+import javax.xml.bind.annotation.XmlRootElement;
+                                ^
+C:\dev\java-upgrade-lab\src\lab\employee\Employee.java:10: エラー: シンボルを見つけられません
+@XmlRootElement(name = "employee")
+ ^
+  シンボル: クラス XmlRootElement
+C:\dev\java-upgrade-lab\src\lab\employee\Employee.java:11: エラー: シンボルを見つけられません
+@XmlAccessorType(XmlAccessType.FIELD)
+ ^
+  シンボル: クラス XmlAccessorType
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeList.java:6: エラー: パッケージjavax.xml.bind.annotationは存在しません
+import javax.xml.bind.annotation.XmlAccessType;
+                                ^
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeList.java:7: エラー: パッケージjavax.xml.bind.annotationは存在しません
+import javax.xml.bind.annotation.XmlAccessorType;
+                                ^
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeList.java:8: エラー: パッケージjavax.xml.bind.annotationは存在しません
+import javax.xml.bind.annotation.XmlElement;
+                                ^
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeList.java:9: エラー: パッケージjavax.xml.bind.annotationは存在しません
+import javax.xml.bind.annotation.XmlRootElement;
+                                ^
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeList.java:12: エラー: シンボルを見つけられません
+@XmlRootElement(name = "employees")
+ ^
+  シンボル: クラス XmlRootElement
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeList.java:13: エラー: シンボルを見つけられません
+@XmlAccessorType(XmlAccessType.FIELD)
+ ^
+  シンボル: クラス XmlAccessorType
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:6: エラー: パッケージjavax.xml.bindは存在しません
+import javax.xml.bind.JAXBContext;
+                     ^
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:7: エラー: パッケージjavax.xml.bindは存在しません
+import javax.xml.bind.JAXBException;
+                     ^
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:8: エラー: パッケージjavax.xml.bindは存在しません
+import javax.xml.bind.Marshaller;
+                     ^
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:9: エラー: パッケージjavax.xml.bindは存在しません
+import javax.xml.bind.Unmarshaller;
+                     ^
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:23: エラー: シンボルを見つけられません
+    public void save(List<Employee> employees) throws JAXBException {
+                                                      ^
+  シンボル:   クラス JAXBException
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:31: エラー: シンボルを見つけられません
+    public List<Employee> load() throws JAXBException {
+                                        ^
+  シンボル:   クラス JAXBException
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\TokenUtil.java:7: エラー: シンボルを見つけられません
+import sun.misc.BASE64Decoder;
+               ^
+  シンボル:   クラス BASE64Decoder
+  場所: パッケージ sun.misc
+C:\dev\java-upgrade-lab\src\lab\employee\TokenUtil.java:8: エラー: シンボルを見つけられません
+import sun.misc.BASE64Encoder;
+               ^
+  シンボル:   クラス BASE64Encoder
+  場所: パッケージ sun.misc
+C:\dev\java-upgrade-lab\src\lab\employee\Employee.java:11: エラー: シンボルを見つけられません
+@XmlAccessorType(XmlAccessType.FIELD)
+                 ^
+  シンボル: 変数 XmlAccessType
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeList.java:13: エラー: シンボルを見つけられません
+@XmlAccessorType(XmlAccessType.FIELD)
+                 ^
+  シンボル: 変数 XmlAccessType
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeList.java:16: エラー: シンボルを見つけられません
+    @XmlElement(name = "employee")
+     ^
+  シンボル:   クラス XmlElement
+  場所: クラス EmployeeList
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:24: エラー: シンボルを見つけられません
+        JAXBContext ctx = JAXBContext.newInstance(EmployeeList.class);
+        ^
+  シンボル:   クラス JAXBContext
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:24: エラー: シンボルを見つけられません
+        JAXBContext ctx = JAXBContext.newInstance(EmployeeList.class);
+                          ^
+  シンボル:   変数 JAXBContext
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:25: エラー: シンボルを見つけられません
+        Marshaller m = ctx.createMarshaller();
+        ^
+  シンボル:   クラス Marshaller
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:26: エラー: シンボルを見つけられません
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+                      ^
+  シンボル:   変数 Marshaller
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:27: エラー: シンボルを見つけられません
+        m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+                      ^
+  シンボル:   変数 Marshaller
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:32: エラー: シンボルを見つけられません
+        JAXBContext ctx = JAXBContext.newInstance(EmployeeList.class);
+        ^
+  シンボル:   クラス JAXBContext
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:32: エラー: シンボルを見つけられません
+        JAXBContext ctx = JAXBContext.newInstance(EmployeeList.class);
+                          ^
+  シンボル:   変数 JAXBContext
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\EmployeeXmlStore.java:33: エラー: シンボルを見つけられません
+        Unmarshaller u = ctx.createUnmarshaller();
+        ^
+  シンボル:   クラス Unmarshaller
+  場所: クラス EmployeeXmlStore
+C:\dev\java-upgrade-lab\src\lab\employee\TokenUtil.java:22: エラー: シンボルを見つけられません
+            return new BASE64Encoder().encode(raw.getBytes("UTF-8"));
+                       ^
+  シンボル:   クラス BASE64Encoder
+  場所: クラス TokenUtil
+C:\dev\java-upgrade-lab\src\lab\employee\TokenUtil.java:29: エラー: シンボルを見つけられません
+        return new String(new BASE64Decoder().decodeBuffer(token), "UTF-8");
+                              ^
+  シンボル:   クラス BASE64Decoder
+  場所: クラス TokenUtil
+ノート: C:\dev\java-upgrade-lab\src\lab\employee\DateFormatDemo.javaは推奨されないAPIを使用またはオーバーライドしています。
+ノート: 詳細は、-Xlint:deprecationオプションを指定して再コンパイルしてください。
+エラー32個
+BUILD FAILED
